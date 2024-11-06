@@ -1,0 +1,198 @@
+/* ===↓↓↓=デフォルト=↓↓↓============================================ */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+    color: rgb(33, 33, 33);
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    touch-action: manipulation;
+}
+
+body {
+    background-color: #e0e0e0;
+    width: 100%;
+    max-width: 430px;
+    margin: auto;
+}
+
+main {
+    position: relative;
+}
+
+
+/* ===↓↓↓=.header=↓↓↓=================================== */
+
+
+
+
+/* ==↓↓↓=<main.>=↓↓↓=========================================================================== */
+#front {
+    display: block;
+}
+
+.title {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: #e0e0e0;
+    /* color: rgb(75, 100, 158); */
+    text-shadow: 1px 1px 2px #fff, -1px -1px 2px #bebebe;
+}
+
+#numWindow {
+    margin: 20px auto 20px auto;
+    width: 91%;
+    display: flex;
+    justify-content: center;
+}
+
+#numBox {
+    width: 90%;
+    max-width: 300px;
+    height: 40px;
+    box-shadow: inset 5px 5px 10px #bebebe,inset -5px -5px 10px #fff;
+    margin: 0 auto;
+    padding: 10px 30px;
+    border-radius: 100px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+#numPad {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    font-size: 30px;
+    font-weight: bold;
+    color: #0a0a0a;
+}
+
+.numKey{
+    all: unset;
+    -webkit-tap-highlight-color: transparent;
+    text-align: center;
+    height: 70px;
+    width: 70px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 100%;
+    background-color: #e0e0e0;
+    box-shadow: 7px 7px 14px #bebebe,inset 2px 2px 6px #ffffff, -7px -7px 14px #ffffff, inset -2px -2px 6px #bebebe;
+}
+
+.numKey:active {
+    box-shadow: inset 7px 7px 14px #bebebe, 2px 2px 3px #ffffff, inset -7px -7px 14px #ffffff, -2px -2px 3px #bebebe;
+    font-size: 28px;
+}
+
+#\#{
+    color: #45cb45;
+}
+
+#\*{
+    color: #eb1414;
+}
+
+.switch {
+    all: unset;
+    margin: 20px auto;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #17eb17;
+    box-shadow: 8px 8px 12px #bebebe, -8px -8px 12px #ffffff, inset 2px 2px 4px #68ff68 , inset -2px -2px 4px #11c911 ;
+}
+
+.switch img {
+    height: 80%;
+}
+
+.play {
+    background-color: #17eb17;
+    box-shadow: 7px 7px 12px #bebebe, -7px -7px 12px #ffffff, inset 2px 2px 3px #68ff68 , inset -2px -2px 3px #11c911 ;
+}
+
+.play:active {
+    box-shadow: -1px -1px 2px #bebebe, 1px 1px 2px #ffffff, inset 7px 7px 14px #bb0707, inset -7px -7px 14px #ff0808;
+    background-color: #eb1414;
+}
+
+.playing {
+    box-shadow: -1px -1px 2px #bebebe, 1px 1px 2px #ffffff, inset -2px -2px 4px #c30a0a, inset 2px 2px 4px #ff8888;
+    background-color: #eb1414;
+}
+
+.playing:active {
+    box-shadow: -1px -1px 2px #bebebe, -1px -1px 2px #ffffff, inset 7px 7px 14px #038803 , inset -7px -7px 14px #92df92 ;
+    background-color: #17db17;
+}
+
+footer {
+    text-align: center;
+    margin-top :32px;
+}
+
+/* === ブレイクポイント ============================= */
+
+@media (min-width: 425px) {
+    .numKey:hover {
+        animation: 0.25s ease-out 0s forwards push;
+    }
+
+    .numKey:active {
+
+    }
+}
+
+/* ===cssアニメーション================================ */
+.hide {
+    animation: 0.3s ease-out 0s forwards hideing;
+}
+
+.appear {
+    animation: 0.5s ease-out 0s forwards appear;
+}
+
+@keyframes hideing {
+    from {
+        top: 20px;
+    }
+    to {
+        top: -90px;
+    }
+}
+
+@keyframes appear {
+    from {
+        top: -90px;
+    }
+    to {
+        top: 20px;
+    }
+}
+
+@keyframes push {
+    0% {
+        box-shadow: 7px 7px 14px #bebebe,inset 2px 2px 6px #ffffff, -7px -7px 14px #ffffff, inset -2px -2px 6px #bebebe;
+    }
+    50% {
+        box-shadow: inset 7px 7px 14px #bebebe, 2px 2px 3px #ffffff, inset -7px -7px 14px #ffffff, -2px -2px 3px #bebebe;
+        font-size: 28px;
+    }
+    100% {
+        box-shadow: 7px 7px 14px #bebebe,inset 2px 2px 6px #ffffff, -7px -7px 14px #ffffff, inset -2px -2px 6px #bebebe;
+    }
+}
