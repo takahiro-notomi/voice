@@ -1,29 +1,3 @@
-<?php
-
-    $dsn = 'mysql:host=localhost;dbname=voice_app;charset=utf8';
-    $user = 'voice_developer';
-    $pass = 'asYL4ekPn(.l-3I3';
-
-    try {
-        $dbh = new PDO($dsn,$user,$pass,[
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-        ]);
-        // echo '接続成功';
-        // SQLの準備
-        $sql = 'SELECT * FROM japan';
-        // SQLの実行
-        $stmt = $dbh->query($sql);
-        // SQLの結果を受けとる
-        $result = $stmt->fetchall(PDO::FETCH_ASSOC);
-        $dbh = null;
-    } catch(PDOException $e){
-        echo '接続失敗'. $e->getMessage();
-        exit();
-    };
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
