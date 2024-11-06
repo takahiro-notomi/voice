@@ -1,14 +1,4 @@
-<!--
-Wifi=13-a
-192.168.10.15:5500/num_pad.html
-http://192.168.10.17:8888/iuVoiceNavi/numPad.html
 
-Wifi=99-a
-192.168.0.11:5500/num_pad.html
-
-wifi=Takahiro
-172.20.10.6:5500/num_pad.html
--->
 
 
 <?php
