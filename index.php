@@ -1,9 +1,5 @@
-
-
-
 <?php
-    // voice_developer
-    // asYL4ekPn(.l-3I3
+
     $dsn = 'mysql:host=localhost;dbname=voice_app;charset=utf8';
     $user = 'voice_developer';
     $pass = 'asYL4ekPn(.l-3I3';
